@@ -1,0 +1,33 @@
+.menutitle {
+	display: block;
+	line-height: 60px;
+	margin: 0;
+	text-align: center;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+.left-sideMenu {
+  float: left;
+  height: 100%;
+  width: 290px;
+   color: #CCC;
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  transition: .3s;
+  position: fixed;
+  top: 30%;
+  left: 0;
+  overflow: auto;
+  z-index: 9999999
+}
+
+.menu-box {
+	height: 360px;
+}
+
+.menu-box .menutitle {
+	background: #11a8ab;
+}
