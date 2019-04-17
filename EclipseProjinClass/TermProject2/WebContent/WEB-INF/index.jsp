@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+	 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <!--
@@ -23,8 +24,6 @@
 </script>
 <link rel="stylesheet" type="text/css" media="screen"
 	href="loginstyle.css">
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 <!-- Function used to shrink nav bar removing paddings and adding black background -->
 <script>
@@ -88,11 +87,6 @@
 				console.log("Togged Up")
 			}
 		});
-	});
-</script>
-<script>
-	$(document).ready(function() {
-
 		$('.toggle').on('click', function() {
 			$('.container').stop().addClass('active');
 		});
@@ -107,7 +101,7 @@
 </script>
 <style type="text/css">
 <%@include file="/CSS/homestyle.css" %>
-<%@include file="/CSS/loginstyle.css" %>
+<%@include file="/CSS/loginstyle.css"%>
 </style>
 </head>
 
@@ -115,7 +109,6 @@
 
 	<!-- /Menu-->
 	<div id="header-nav">
-
 		<div class="cont">
 			<!-- H1 for SEO -->
 
@@ -163,46 +156,12 @@
 
 						</form>
 					</div>
-					<!-- <div class="card alt">
-						<div class="toggle"></div>
-						<h1 class="title">
-							Register
-							<div class="close"></div>
-						</h1>
-						<form>
-							<div class="input-container">
-								<input type="text" id="{label}" required="required" /> <label
-									for="{label}">Username</label>
-								<div class="bar"></div>
-							</div>
-							<div class="input-container">
-								<input type="email" id="{label}" required="required" /> <label
-									for="{label}">Email Address</label>
-								<div class="bar"></div>
-							</div>
-							<div class="input-container">
-								<input type="password" id="{label}" required="required" /> <label
-									for="{label}">Password</label>
-								<div class="bar"></div>
-							</div>
-							<div class="input-container">
-								<input type="password" id="{label}" required="required" /> <label
-									for="{label}">Repeat Password</label>
-								<div class="bar"></div>
-							</div>
-							<div class="button-container">
-								<button>
-									<span>Next</span>
-								</button>
-							</div>
-						</form>
-					</div> -->
 				</div>
 			</div>
 			<!-- Menu Items -->
 			<nav id="menu" role="navigation">
 				<ul class="left">
-					<li><a href="#">About</a></li>
+					<li><a href="about">About</a></li>
 					<li><a href="#">Products</a></li>
 					<li><a href="#">Services</a></li>
 					<li><a href="#">Contact</a></li>
@@ -216,4 +175,5 @@
 			</div>
 		</div>
 	</div>
+
 </html>

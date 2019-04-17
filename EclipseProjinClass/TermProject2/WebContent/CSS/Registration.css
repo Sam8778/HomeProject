@@ -1,1 +1,32 @@
-@charset "ISO-8859-1";
+
+h3{
+    font-size: 1.4rem !important;
+    
+}
+.container
+{
+	margin-top: 80px;
+	width: 350px !important;
+	height: 1000px;
+}
+
+.tabs .indicator
+{
+	background-color: #e0f2f1;
+	height: 60px;
+    opacity: 0.3;
+}
+
+.form-container
+{
+	padding: 50px;
+	padding-top: 10px;
+}
+
+.confirmation-tabs-btn
+{
+	position: absolute;
+}
+.tabs{
+    text-align: center !important;
+}

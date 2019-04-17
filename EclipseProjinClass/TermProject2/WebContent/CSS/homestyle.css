@@ -2,6 +2,9 @@ a {
   text-decoration: none;
   color: #000;
 }
+body{
+	margin:0;
+}
 a:hover {
   color: rgb(95, 95, 95);
 }
@@ -196,8 +199,9 @@ text-align: center;
 
 
 .header-image {
-  background: url(../images/Home.jpg) no-repeat top left / cover;
-  background: linear-gradient(rgba(29, 35, 38, 0.8), rgba(29, 35, 38, 0.8)), url(../images/Home.jpg) no-repeat top left / cover;
+	
+  background: url(http://www.liquidplanner.com/wp-content/uploads/HiRes-17.jpg) no-repeat top left / cover;
+  background: linear-gradient(rgba(29, 35, 38, 0.8), rgba(29, 35, 38, 0.8)), url(http://www.liquidplanner.com/wp-content/uploads/HiRes-17.jpg) no-repeat top left / cover;
   text-align: center;
   padding: 18rem 3rem 18rem;
 }

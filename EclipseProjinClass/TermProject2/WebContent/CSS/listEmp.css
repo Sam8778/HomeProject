@@ -75,3 +75,17 @@ only screen and (max-width: 760px),
 	}
 
 }
+.Addbutton {
+	 margin-bottom: 50px;
+	 background-color: #f44336;
+	 display: inline-block;
+	 padding: 14px 25px;
+     text-align: center;
+     text-decoration: none;
+     font-family: 'hind_m','simhei',verdana,Helvetica,sans-serif;
+     position: fixed;
+  left: 50%;
+  bottom: 20px;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+}

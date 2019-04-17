@@ -22,8 +22,7 @@
 	
 </script>
 <link rel="stylesheet" type="text/css" href="Adminlogin.css">
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 
 <!-- Function used to shrink nav bar removing paddings and adding black background -->
 <script>
@@ -105,50 +104,17 @@
 			</a>
 			<!-- /Small screen menu button -->
 			<div class="right loginbtn">
-				<a href="#">
+				<a href="logout">
 					<h1>Log Out</h1>
 				</a>
 			</div>
 			
-					<!-- <div class="card alt">
-						<div class="toggle"></div>
-						<h1 class="title">
-							Register
-							<div class="close"></div>
-						</h1>
-						<form>
-							<div class="input-container">
-								<input type="text" id="{label}" required="required" /> <label
-									for="{label}">Username</label>
-								<div class="bar"></div>
-							</div>
-							<div class="input-container">
-								<input type="email" id="{label}" required="required" /> <label
-									for="{label}">Email Address</label>
-								<div class="bar"></div>
-							</div>
-							<div class="input-container">
-								<input type="password" id="{label}" required="required" /> <label
-									for="{label}">Password</label>
-								<div class="bar"></div>
-							</div>
-							<div class="input-container">
-								<input type="password" id="{label}" required="required" /> <label
-									for="{label}">Repeat Password</label>
-								<div class="bar"></div>
-							</div>
-							<div class="button-container">
-								<button>
-									<span>Next</span>
-								</button>
-							</div>
-						</form>
-					</div> -->
+					
 				
 			<!-- Menu Items -->
 			<nav id="menu" role="navigation">
 				<ul class="left">
-					<li><a href="#">About</a></li>
+					<li><a href="about">About</a></li>
 					<li><a href="#">Profile</a></li>
 					<li><a href="#">News</a></li>
 				</ul>

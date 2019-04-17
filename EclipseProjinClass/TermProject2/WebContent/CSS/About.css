@@ -1,0 +1,93 @@
+:root {
+  --transition: all 1s;
+}
+
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+body{
+	margin: 0;
+}
+.hero {
+  margin-top: 75px;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-weight: lighter;
+  width: 100%;
+  height: 100vh;
+  background-image: url(https://images.unsplash.com/photo-1482823984759-365bf06eb5fb?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=3a7cf5e983a69ee60a3590077e2684fd);
+  background-position: center;
+  background-size: cover;
+}
+
+.MainImage {
+  position: relative;
+  width: 100%;
+  left: 50%;
+  top: 50%;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0;
+  color: #fff;
+  opacity: 1;
+  transform: translate(-50%, -50%);
+
+  transition: var(--transition);
+}
+
+.headline, .subheadline {
+  font-weight: lighter;
+  transform: translateY(10%);
+  opacity: 0;
+  transition: var(--transition);
+}
+.headline {
+  font-size: 4em;
+  letter-spacing: 25px;
+
+}
+.subheadline {
+  letter-spacing: 15px;
+}
+
+/* class added to header on first scroll */
+.MainImage-slide-in {
+  transform: translate(0);
+  opacity: 1;
+}
+.MainImage-fade-out {
+  opacity: 0;
+}
+
+.panels {
+  width: 80%;
+  margin: 10% auto;
+  line-height: 1.5;
+}
+
+.panel {
+  display: flex;
+  margin: 2em 0;
+  align-items: center;
+  
+  opacity: 0;
+  transform: translateY(10%);
+  
+  transition: var(--transition);
+}
+
+.panel div {
+  width: 50%;
+  padding: 2em;
+}
+
+.panel img {
+  width: 100%;
+  box-shadow: 0 20px 25px -10px rgba(0,0,0,.6);
+}
+
+.panel-fade-in {
+  opacity: 1;
+  transform: translate(0);
+}

@@ -84,7 +84,6 @@
 
 <style type="text/css">
 <%@include file="/CSS/homestyle.css" %>
-<%@include file="/CSS/loginstyle.css" %>
 </style>
 </head>
 <body>
@@ -103,14 +102,14 @@
 			</a>
 			<!-- /Small screen menu button -->
 			<div class="right loginbtn">
-				<a href="#">
+				<a href="logout">
 					<h1>Log Out</h1>
 				</a>
 			</div>
 			<!-- Menu Items -->
 			<nav id="menu" role="navigation">
 				<ul class="left">
-					<li><a href="#">About</a></li>
+					<li><a href="about">About</a></li>
 					<li><a href="#">Products</a></li>
 					<li><a href="#">Services</a></li>
 					<li><a href="#">Contact</a></li>
