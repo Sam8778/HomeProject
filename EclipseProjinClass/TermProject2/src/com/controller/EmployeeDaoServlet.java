@@ -79,6 +79,13 @@ public class EmployeeDaoServlet extends HttpServlet {
 				break;
 			case "/about":
 				about(request, response);
+				break;
+			case "/error":
+				error(request, response);
+				break;
+			case "/emplogin":
+				emplogin(request, response);
+				break;
 //			default:
 //				findAll(request, response);
 //				break;
@@ -88,6 +95,25 @@ public class EmployeeDaoServlet extends HttpServlet {
 			throw new ServletException(ex);
 		}
 
+	}
+
+	private void emplogin(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		System.out.println(request.getParameter("id"));
+		HttpSession session = request.getSession(); 
+//		int id = Integer.parseInt(request.getParameter("id"));
+//		System.out.println("id" + id);
+//		Employee emp = empdao.getEmployee(id);
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/Employeelogin.jsp");
+//		request.setAttribute("emp", emp);
+		dispatcher.forward(request, response);
+		
+		
+	}
+
+	private void error(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		System.out.println( "error");
+		request.getRequestDispatcher("/WEB-INF/Error.jsp").include(request, response);
+		
 	}
 
 	private void about(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -115,10 +141,10 @@ public class EmployeeDaoServlet extends HttpServlet {
 			Employee loginEmp = new Employee();
 			loginEmp.setEmp_email(request.getParameter("email"));
 			loginEmp.setEmp_password(request.getParameter("pwd"));
-
+			
 			String ROLE = empdao.userlogin(loginEmp);
 			System.out.println("Employees ROLE" + ROLE);
-
+			
 			if (ROLE.equals("admin")) {
 
 				/*
@@ -144,12 +170,11 @@ public class EmployeeDaoServlet extends HttpServlet {
 				HttpSession session = request.getSession(); // Creating a session
 				session.setAttribute("emp", loginEmp.getEmp_email()); // setting session attribute
 				request.setAttribute("emailid", loginEmp.getEmp_email());
-
-				request.getRequestDispatcher("/WEB-INF/Employeelogin.jsp").forward(request, response);
-				// response.sendRedirect("invalidLogin.jsp"); //error page
+				response.sendRedirect("emplogin"); 
 			}
 			else {
-				response.sendRedirect("Error.jsp");
+			
+				response.sendRedirect("error");
 			}
 		} catch (Throwable e) {
 			System.out.println(e + "error");

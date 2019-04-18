@@ -1,5 +1,5 @@
 a {
-  text-decoration: none;
+  text-decoration: none !important;
   color: #000;
 }
 body{
@@ -16,7 +16,6 @@ a:hover {
   
   -webkit-transition: -webkit-transform 0.7s 0.3s ease;
   -moz-transition: -moz-transform 0.7s 0.3s ease;
-  -ms-transition: -ms-transform 0.7s 0.3s ease;
   transition: transform 0.7s 0.3s ease;
   -webkit-backface-visibility: hidden;
   -webkit-transform: translate3d(0px, 0px, 0px);
@@ -27,7 +26,6 @@ a:hover {
 #header-nav.hide-nav-bar {
   -webkit-transform: translate(0, -100%);
   -moz-transform: translate(0, -100%);
-  -ms-transform: translate(0, -100%);
   transform: translate(0, -100%);
   -webkit-backface-visibility: hidden;
 }
@@ -108,6 +106,7 @@ nav[role=navigation] li a {
 .brand h1 {
   margin: 4px;
   font-size: 1.5em;
+  font-weight: 700 !important;
 }
 @media screen and (min-width: 48.25em) {
   a.menu-link {
@@ -197,7 +196,9 @@ text-align: center;
   color: #838383;
 }
 
-
+*, ::after, ::before {
+    box-sizing: inherit;
+}
 .header-image {
 	
   background: url(http://www.liquidplanner.com/wp-content/uploads/HiRes-17.jpg) no-repeat top left / cover;

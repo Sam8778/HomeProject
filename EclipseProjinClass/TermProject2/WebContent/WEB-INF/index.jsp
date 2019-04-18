@@ -13,7 +13,85 @@
 <meta charset="ISO-8859-1">
 <title>Project Management Website</title>
 <link rel="stylesheet" type="text/css" href="homestyle.css">
-<script
+<link rel="stylesheet" type="text/css" media="screen" href="loginstyle.css">
+
+<style type="text/css">
+<%@include file="/CSS/homestyle.css" %>
+<%@include file="/CSS/loginstyle.css"%>
+</style>
+</head>
+
+<body>
+
+	<!-- /Menu-->
+	<div id="header-nav">
+		<div class="cont">
+			<!-- H1 for SEO -->
+
+			<div class="brand">
+				<a href="#"> 
+					<h1>Niit</h1>
+				</a>
+
+			</div>
+
+			<!-- Small screen menu button -->
+			<a href="#menu .left" class="menu-link"> <span class="bar1"></span>
+				<span class="bar2"></span> <span class="bar3"></span>
+			</a>
+			<!-- /Small screen menu button -->
+			<div class="right loginbtn">
+				<a href="#">
+					<h1>Log In</h1>
+				</a>
+			</div>
+			<div id="loginmain">
+				<div id="login" class="container">
+					<div class="card"></div>
+					<div class="card">
+						<h1 class="title">Login</h1>
+						<div class="close"></div>
+						<form action="login" method="post">
+							<div class="input-container">
+								<input type="text" id="{label}" required="required" name="email"/> 
+								<label for="{label}">EmailId</label>
+								<div class="bar"></div>
+							</div>
+							<div class="input-container">
+								<input type="password" id="{label}" required="required" name="pwd"/> <label
+									for="{label}">Password</label>
+								<div class="bar"></div>
+							</div>
+							<div class="button-container">
+								<button>
+									<span>Go</span>
+								</button>
+							</div>
+							<div class="footer">
+								<a href="#">Forgot Your Password</a>
+							</div>
+
+						</form>
+					</div>
+				</div>
+			</div>
+			<!-- Menu Items -->
+			<nav id="menu" role="navigation">
+				<ul class="left">
+					<li><a href="about">About</a></li>
+					<li><a href="#">News</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</nav>
+			<!-- /Menu Items -->
+			<div class="header-image">
+				<div class="header-image-text">
+					<h2 class="header-title">Put your trust in Us</h2>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script
 	src="https://cdnjs.cloudflare.com/ajax/libs/jquery.transit/0.9.9/jquery.transit.min.js"></script>
@@ -22,8 +100,6 @@
 	type="text/javascript">
 	
 </script>
-<link rel="stylesheet" type="text/css" media="screen"
-	href="loginstyle.css">
 
 <!-- Function used to shrink nav bar removing paddings and adding black background -->
 <script>
@@ -87,93 +163,14 @@
 				console.log("Togged Up")
 			}
 		});
-		$('.toggle').on('click', function() {
-			$('.container').stop().addClass('active');
-		});
-
+		
 		$('.close').on('click', function() {
-			$('.container').stop().removeClass('active');
-		});
+			$('.container').stop().removeClass('show');
+		}); 
 		$('.loginbtn').on('click', function() {
 			$('.container').addClass('show');
 		});
 	});
 </script>
-<style type="text/css">
-<%@include file="/CSS/homestyle.css" %>
-<%@include file="/CSS/loginstyle.css"%>
-</style>
-</head>
-
-<body>
-
-	<!-- /Menu-->
-	<div id="header-nav">
-		<div class="cont">
-			<!-- H1 for SEO -->
-
-			<div class="brand">
-				<a href="#"> 
-					<h1>Niit</h1>
-				</a>
-
-			</div>
-
-			<!-- Small screen menu button -->
-			<a href="#menu .left" class="menu-link"> <span class="bar1"></span>
-				<span class="bar2"></span> <span class="bar3"></span>
-			</a>
-			<!-- /Small screen menu button -->
-			<div class="right loginbtn">
-				<a href="#">
-					<h1>Log In</h1>
-				</a>
-			</div>
-			<div id="loginmain">
-				<div id="login" class="container">
-					<div class="card"></div>
-					<div class="card">
-						<h1 class="title">Login</h1>
-						<form action="login" method="post">
-							<div class="input-container">
-								<input type="text" id="{label}" required="required" name="email"/> 
-								<label for="{label}">EmailId</label>
-								<div class="bar"></div>
-							</div>
-							<div class="input-container">
-								<input type="password" id="{label}" required="required" name="pwd"/> <label
-									for="{label}">Password</label>
-								<div class="bar"></div>
-							</div>
-							<div class="button-container">
-								<button>
-									<span>Go</span>
-								</button>
-							</div>
-							<div class="footer">
-								<a href="#">Forgot Your Password</a>
-							</div>
-
-						</form>
-					</div>
-				</div>
-			</div>
-			<!-- Menu Items -->
-			<nav id="menu" role="navigation">
-				<ul class="left">
-					<li><a href="about">About</a></li>
-					<li><a href="#">Products</a></li>
-					<li><a href="#">Services</a></li>
-					<li><a href="#">Contact</a></li>
-				</ul>
-			</nav>
-			<!-- /Menu Items -->
-			<div class="header-image">
-				<div class="header-image-text">
-					<h2 class="header-title">Put your trust in Us</h2>
-				</div>
-			</div>
-		</div>
-	</div>
-
+</body>
 </html>

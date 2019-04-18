@@ -225,6 +225,20 @@
 .show {
 	display: block;
 }
+.close {
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  display: inline;
+  color: #ffffff;
+  font-size: 58px;
+  font-weight: 400;
+}
+.close:before {
+  content: '\00d7';
+  color: #ed2553;
+}
 /* Keyframes */
 @
 -webkit-keyframes buttonFadeInUp { 0% {

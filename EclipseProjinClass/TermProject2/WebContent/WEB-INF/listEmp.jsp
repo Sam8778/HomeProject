@@ -116,8 +116,7 @@
 			<nav id="menu" role="navigation">
 				<ul class="left">
 					<li><a href="about">About</a></li>
-					<li><a href="#">Products</a></li>
-					<li><a href="#">Services</a></li>
+					<li><a href="#">News</a></li>
 					<li><a href="#">Contact</a></li>
 				</ul>
 			</nav>

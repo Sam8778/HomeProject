@@ -79,6 +79,7 @@ public class EmployeeService implements EmployeeDao {
 				System.out.println("get" + emp_status);
 
 				Emp = new Employee(emp_id, emp_name, emp_mobile, emp_email, emp_password, emp_role, emp_status);
+				System.out.println("emp" + Emp);
 
 			}
 
@@ -168,7 +169,7 @@ public class EmployeeService implements EmployeeDao {
 	public String userlogin(Employee log) {
 		Statement stmt = null;
 		ResultSet rs = null;
-
+		
 		String email = log.getEmp_email();
 		String password = log.getEmp_password();
 		String role = null;
@@ -177,7 +178,7 @@ public class EmployeeService implements EmployeeDao {
 		String passworddb = null;
 		String searchQuery = "select empemail,emppassword,emprole from EMP where empemail='" + email
 				+ "' AND emppassword='" + password + "'";
-		System.out.println("Your user name is " + email);
+		System.out.println("Your user email is " + email);
 		System.out.println("Your password is " + password);
 		System.out.println("Query: " + searchQuery);
 
@@ -191,15 +192,18 @@ public class EmployeeService implements EmployeeDao {
 				emaildb = rs.getString("empemail");
 				passworddb = rs.getString("emppassword");
 				role = rs.getString("emprole");
+				
 			}
 			// *if user does not exist set the isValid variable to false
 			if ((email.equals(emaildb)) && (password.equals(passworddb)) && (role.equals("admin"))) {
 
 				return "admin";
 			} else if ((email.equals(emaildb)) && (password.equals(passworddb)) && (role.equals("emp"))) {
+				
 				return "emp";
 			} else {
 				System.out.println("Sorry, you are not a registered user! Please sign up first");
+				return "unregistered";
 
 			}
 		} catch (Exception ex) {

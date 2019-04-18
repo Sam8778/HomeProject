@@ -16,16 +16,7 @@
 <!-- Compiled and minified CSS -->
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-<script type = "text/javascript"
-    src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<!-- Compiled and minified JavaScript -->
-<script
-	src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-<script>
-$(document).ready(function(){
-    $('select').formSelect();
-  });
-</script>
+
 </head>
 
 <title>Registration Form</title>
@@ -45,28 +36,30 @@ $(document).ready(function(){
 					<div class="row">
 						<div class="input-field col l12 s8">
 							<i class="material-icons prefix">vpn_key</i> <input type="number"
-								class="validate" required="required" id="eid" name="id" value="<c:out value='${emp.emp_id}' />" /> <label 
-								for="eid">ID</label>
+								class="validate" required="required" id="eid" name="id"
+								value="<c:out value='${emp.emp_id}' />" /> <label for="eid">ID</label>
 						</div>
 					</div>
 					<div class="row">
 						<div class="input-field col l12 s8">
 							<i class="material-icons prefix">person</i> <input type="text"
-								class="validate" required="required" id="ename" name="name" value="<c:out value='${emp.emp_name}' />"/> <label
-								for="ename">Username</label>
+								class="validate" required="required" id="ename" name="name"
+								value="<c:out value='${emp.emp_name}' />" /> <label for="ename">Username</label>
 						</div>
 					</div>
 					<div class="row">
 						<div class="input-field col l12 s8">
 							<i class="material-icons prefix">phone</i> <input type="tel"
-								class="validate" required="required" id="emobile" name="mobile" value="<c:out value='${emp.emp_mobile}' />"/> <label
+								class="validate" required="required" id="emobile" name="mobile"
+								value="<c:out value='${emp.emp_mobile}' />" /> <label
 								for="emobile">Mobile</label>
 						</div>
 					</div>
 					<div class="row">
 						<div class="input-field col l12 s8">
 							<i class="material-icons prefix">email</i> <input type="email"
-								class="validate" required="required" id="eemailid" name="email" value="<c:out value='${emp.emp_email}' />"/> <label
+								class="validate" required="required" id="eemailid" name="email"
+								value="<c:out value='${emp.emp_email}' />" /> <label
 								for="eemailid">Email</label> <span class="helper-text"
 								data-error="invalid"></span>
 						</div>
@@ -74,8 +67,9 @@ $(document).ready(function(){
 					<div class="row">
 						<div class="input-field col l12 s8">
 							<i class="material-icons prefix">lock</i> <input type="password"
-								class="validate" required="required" id="epassword" name="password" value="<c:out value='${emp.emp_password}' />"/> <label
-								for="epassword">Password</label>
+								class="validate" required="required" id="epassword"
+								name="password" value="<c:out value='${emp.emp_password}' />" />
+							<label for="epassword">Password</label>
 						</div>
 					</div>
 					<div class="row">
@@ -83,24 +77,23 @@ $(document).ready(function(){
 							<i class="material-icons prefix">how_to_reg</i>
 						</div>
 						<div class="input-field col l3 s4">
-							<label> <input type="radio" class="with-gap pink" required="required"value="emp" name="role"/>
-								<span>EMP</span>
+							<label> <input type="radio" class="with-gap pink"
+								required="required" value="emp" name="role" /> <span>EMP</span>
 							</label>
 						</div>
 						<div class="input-field col l3 s4">
-							<label> <input type="radio" class="with-gap" required="required" value="admin" name="role" />
-								<span>ADMIN</span>
+							<label> <input type="radio" class="with-gap"
+								required="required" value="admin" name="role" /> <span>ADMIN</span>
 							</label>
 						</div>
 					</div>
 					<div class="row">
 						<div class="input-field col l12 s4">
 							<select name="status">
-							<option value="" disabled selected	>Choose your option</option>
-							<option value="TRUE">TRUE</option>
-							<option value="FALSE">FALSE</option>
-							</select>
-							<label>Status</label>
+								<option value="" disabled selected>Choose your option</option>
+								<option value="TRUE">TRUE</option>
+								<option value="FALSE">FALSE</option>
+							</select> <label>Status</label>
 						</div>
 					</div>
 					<center>
@@ -112,6 +105,16 @@ $(document).ready(function(){
 			</form>
 		</div>
 	</div>
+	<script type="text/javascript"
+		src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<!-- Compiled and minified JavaScript -->
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('select').formSelect();
+		});
+	</script>
 </body>
 
 </html>
